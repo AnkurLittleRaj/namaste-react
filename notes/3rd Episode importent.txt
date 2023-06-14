@@ -1,0 +1,45 @@
+we can write script like
+start : parcel index.html
+build: parcel build index.html
+
+------
+and in terminal if we write npm start 
+it will be same as npm run start 
+(this happens only for start)
+
+---------
+if we have to do the similar thing for build , we can't.
+we have to write npm run build
+
+
+---------------------------------------------
+React element is equivalent to DOM element.
+
+React.createElement("h1",{},"i am h1 tag")    ----> This is not HTML.
+React.createElement will create object ---> VVI
+
+
+When we render this Object in DOM , it becomes HTML
+
+--------------------------------------------------------
+
+const parent == React.createElement("h1",{},"i am h1 tag") ;
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(parent);
+
+html
+-----
+<div id="root">
+<h3> hi there </h3>
+    </div>
+
+
+
+    so for this code we will see the browser gives i am h1 tag 
+
+    because render method replace whatever there in root in DOM
+
+
+    -----------------------------------------------------
+JSX ---> It is used to make life easy. it transform code  to react element. 
+it is not html. We can write React code without JSX also

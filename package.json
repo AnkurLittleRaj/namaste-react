@@ -1,0 +1,29 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "this is react -app for learning",
+
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkurLittleRaj/namaste-react.git"
+  },
+  "keywords": [
+    "react",
+    "namaste-react"
+  ],
+  "author": "Ankur Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnkurLittleRaj/namaste-react/issues"
+  },
+  "homepage": "https://github.com/AnkurLittleRaj/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.9.2"
+  },
+  "browsersList":[
+    "last 10 version"
+  ]
+}

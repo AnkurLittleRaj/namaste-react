@@ -1,0 +1,57 @@
+2nd episode
+There are 2 types of dependencies:-
+1>Dev Dependencies
+ dev dependencies are dependencies that used at time of development.
+ for example :-
+ we need parcel to bundle,minify our code . so we install parcel at time of developement.
+npm i -D parcel
+
+2>Normal Dependencies
+
+Normal dependencies are dependencies that are used in production also
+
+------------
+sometime when we do install package we get something like this
+
+    "parcel": "^2.9.2"
+  ^ this is called caret.
+  so it means currently it is 2.9.2 in package and in future if minor upgrade (2.9.3) version will be there in npm ,
+  it will automatically upgrade in package.json
+
+
+
+  ----------------------------
+  sometime in package.json we get ~ with pacage, it known as tilde
+     "xyz": "~2.9.2"
+
+  so in future if major upgrade (3.x.x) version will be there in npm ,
+  it will automatically upgrade to major version in package.json
+
+
+
+  -----------------------------------------
+  package.lock.json 
+  it keeps record of exact version of package inside our app.
+  so package.json can have ^ or ~ with package version but package-lock.json will tell exact verion
+  for ex:-
+     "parcel": {
+      "version": "2.9.2",
+      "resolved": "https://registry.npmjs.org/parcel/-/parcel-2.9.2.tgz",
+      "integrity": "sha512-nTpT/0JIhGW5rKXVnVGHyLBFK/KxteqzsSjQNzeGybiBttnIYRXnM03e2QJX0GWqiS9OtM4rJro04DNHoqx3Ug==",
+     }
+"integrity" --> it have hash as value which keeps package same in local(machine) and prod
+
+
+
+---------------------------
+
+npx --> its a command to execute package
+example --
+when we write npx parcel index.html
+
+so npx will execute parcel package and parcel will start doing its work and use index.html
+-------------------
+
+import or export can't be used in normal js file
+
+to use import or export we have to tell type="module"
