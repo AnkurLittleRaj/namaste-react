@@ -42,4 +42,137 @@ html
 
     -----------------------------------------------------
 JSX ---> It is used to make life easy. it transform code  to react element. 
-it is not html. We can write React code without JSX also
+it is not html. We can write React code without JSX also. its HTML like or XML like syntax.
+
+example of JSX 
+
+const jsxHeading = <h1> Hi there from jsx </h1>
+
+
+so when this piece of code is executed it becomes reactElement
+like this :-
+const jsxHeading =React.createElement("h1",{},"Hi there from jsx ")  
+
+---------------------------------------------------------------------
+            VVI
+
+
+const jsxHeading = <h1> Hi there from jsx </h1>
+this is not pure js, we will get error when we will try to execute this code in browser console or JS engine.
+So , this code is working in this project because of PARCEL.
+
+so this code (
+const jsxHeading = <h1> Hi there from jsx </h1>) before gooing to JS engine , it gets transpiled by BABEL which is package inside PARCEL.
+Then JS engine will recieve the code that browser can understand.
+
+So transpilation is not done by PARCEL, it uses BABEL to do the transpilation.
+
+
+---------------------------------------------------
+
+If we have to give attribute to JSX we have to give camelCase.
+for example in html we give tabindex , in jsx we will write tabIndex.
+for class in html, we write className in JSX
+
+
+-----------------------------------
+if we have to write jsx of multiple line then we have to use brackets
+ex:-
+
+const jsxHead = (<h1>
+hello there
+
+</h1>)
+
+
+
+
+--------------------------------------------------------------
+                                  REACT COMPONENTS
+There are 2 types of COMPONENTS
+1> Class Based component  ----> Old way
+2>Functional component  ----> New way
+
+
+class Based component uses Javascript classes to create component
+Functional Based Component uses Javascript functions to create component
+--------------------------------------------------------------------------
+
+React Functional component is normal function in JS.
+**** whwnever we create a component in react , we have to name start it with capital Letter.
+for example Heading is ok , heading is not.
+By writting Heading react will understand that its a component.
+
+
+Functional component is normal js function which return JSX or react element
+
+
+---------------------------------------------------------
+ to render functional component to the page
+
+ we have to wrap that functional component inside < />.
+
+ ex :-
+
+ const FunctionalHeading = () =>{
+    return <h1> hello </h1>
+ }
+
+ root.render(<FunctionalHeading/>)  
+
+ so babel will understand that its functional component we want to render
+
+
+
+ ------------
+ const FunctionalHeading = () =>{
+    return <h1> hello </h1>
+ }
+ const Title = () =>{
+    <FunctionalHeading />
+     <h1> hello Title </h1>
+ }
+
+
+ This is called Component composition.
+ Basically using one component inside other.
+ ----------------------------------------------
+
+
+ inside JSX we can use JS
+
+ ex:-
+const numberVal =100;
+ const title = <h1>hi {numberVal}</h1>
+
+ it will print hi 100
+ --------------------------
+ React.Fragment
+
+ its similar to ng container of Angular.
+ it doesn't take space in dom unlike div.
+ we can insert code inside it to render
+
+
+ CONCEPT :- 
+
+
+ In JSX its important to have a parent . mean's we can't have two div as sibling .
+ for example :-
+  const title =( <h1>hi {numberVal}</h1> 
+  <h2> hi there </h2>
+  );
+this is invalid as in this JSX there are 2 sibling, so it is invalid.
+
+
+so to resolve this we can use React. Fragment
+   const title =( <React.Fragment>
+      <h2>Test</h2>
+  </React.Fragment>);
+
+  so there is also other way to use React.Fragment
+  const title =( <>
+      <h2>Test</h2>
+  </>);
+
+  so in react  <> </> is same as <React.Fragment>  </React.Fragment> .
