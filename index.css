@@ -1,3 +1,41 @@
-#heading{
-    color: red;
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logoImage{
+    width: 100px;
+}
+.nav-items{
+    /* display: flex; */
+    padding: 0 10px 0 0;
+    /* margin-right: 10%; */
+    font-size: 20px;
+    
+}
+.nav-items>ul{
+    display: flex;
+    /* justify-content: flex-end; */
+    list-style: none;
+   
+}
+.nav-items>ul>li{
+    padding: 0px 10px;
+}
+.restraunt-card{
+    border: 1px solid black;
+    background: #f0f0f0;
+    width: 200px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+.restraunt-card :hover{
+    border: 1px solid orange;
+}
+.restraunt-food-Image{
+    width: 200px;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
 }

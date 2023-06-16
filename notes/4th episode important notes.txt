@@ -1,0 +1,73 @@
+
+
+First thing when we start a project, We should plan
+
+1> We should know what we are going to build (UI Design a layout)
+
+
+------------------------------------------------------
+so lets build a online food odering App
+
+made one wireframe using paint inside wireframe folder check that
+
+now lets do LLD(Low level design)
+
+so Majorly we will have 3 component and in that 3 component it will have its child COMPONENTS
+
+
+so here are components:-
+
+1> HEADER COMPONENT
+   A> LOGO COMPONENT
+   B> NAV ITEMS
+
+
+2> BODY COMPONENT
+ A> SEARCH COMPONENT
+ B> RESTRAUNT CONTAINER COMPONENT ---> IT WILL HAVE ALL CARDS
+     a> RESTAURANT CARD COMPONENT
+
+3>FOOTER COMPONENT
+  A> COPYRIGHT
+  B> ADDRESS
+  C> LINKS
+  D> CONTACT
+
+  --------------------------------------------------------------------------
+  so now we will build the app based on above components which we decided
+
+  *** important
+  whenever its possible create component when it is seeing that it can be reused
+
+
+
+  ----------------------------------------------------------------------------
+     PROPS
+
+Props is something which you can pass to the component.
+Its like properties
+
+passing a prop to a component is same like passing a argument to function
+
+
+
+------------------------------------------------------------------------------
+
+                             CONFIG DRIVEN UI
+
+--------------------- > (Must study for UI system design)
+
+Ui view based on config data coming from backend.
+
+suppose there is data coming for bangalore city that 20 offers card , ui will show it with crousel.
+offer coming for chennai 10 offers card ,
+no offers for kolkata.
+
+so for bangalore,chennai backend will give some keywords like 'havingOffers' and ui will show offers with crousel for chennai and bangalore users.
+  for kolkata users backend will not be send 'havingOffers' or will be sending like 'noOffers', so ui will not show any offers card.
+
+
+--------------------------------------------------------------------------------------------------
+
+
+Dont use index as keys in react it's bad ppractice
