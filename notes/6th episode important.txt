@@ -6,3 +6,15 @@ also known as Single Responsibility principle
 
 Different services for different work in project . like for ui different service, for authentication different service, for db different dervice,
 like that for everything diff services.
+
+-----------------------------------
+
+                      useEffect
+
+
+This hooks works after when react completes rendering component
+
+
+
+-------------------------
+whenever  state variable update , react triggers a reconciliation cycle (re renders the component)
