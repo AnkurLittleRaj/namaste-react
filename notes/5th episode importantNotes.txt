@@ -1,0 +1,63 @@
+Two Types of export/import
+
+- Default Export/import
+export default Component;
+import Component from "path";
+
+
+
+-Named Export/Import
+export const Component;
+
+import {Component} from "path";
+
+
+    REACT HOOKS
+--------------------------
+
+ useState :-
+  so suppose if there is something change happening in List or something in code and we want our DOM also
+  to be updated (like interpolation in Angular ) , so we can use useState hook provided by react.
+
+  so initialy we have to give some default values(see in code)
+  and then use setListname to update the value and that value will render in UI
+
+
+
+Whenever state variable get updated, react will rerender the Component
+and update the DOM.
+
+Reconciliation Algorithm
+
+---------------------
+React uses this algorithm.
+This Reconciliation Algorithm is also known as React Fiber.
+
+
+
+Virtual DOM - Representation of actual DOM
+
+To understand this let's take example
+
+So let say we have 7 restraunt card list and on button click we are filtering the list 
+and 3 Restraunt card is showing.
+
+so how react is doing this?
+so first react is creating a virtual Dom which is nothing but an object 
+. so we have now virtual Dom containing 7 restraunt card.
+
+Now when button clicked , now new virtual dom is created with 3 card list.
+Now there comes concept of Diff Algorithm(explain below).
+this diff algorithm then decides what to update in the real DOM.
+
+
+
+   Diff Algorithm
+   ----------------
+
+Diff Algorithm is algorithm in which virtual doms are compared
+as these are objects and then based on comparison the real DOM get modified and displayed in UI.
+
+
+
+for more understanding read this https://github.com/acdlite/react-fiber-architecture

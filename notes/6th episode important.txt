@@ -1,0 +1,8 @@
+MICROSERVICE architecture
+---------------------------------
+
+SEPERATION OF CONCERN -
+also known as Single Responsibility principle
+
+Different services for different work in project . like for ui different service, for authentication different service, for db different dervice,
+like that for everything diff services.
