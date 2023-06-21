@@ -3,6 +3,7 @@ import resList from '../utils/mockData';
 import { useEffect, useState } from 'react';
 
 import Shimmer from './Shimmer';
+import { Link } from 'react-router-dom';
 
 
 const BodyComponent = () =>{
@@ -55,9 +56,12 @@ onClick={ ()=>{
     </div>
     <div className="res-container">
         {filteredfRestauraunt.map((res)=>(
+          
             // console.log("res");
-            
-    <RestrauntCardComponent resData={res} key={res.id} />
+            <Link to={"/restraunt/"+res.data.id}>
+    <RestrauntCardComponent resData={res}  />
+    </Link>
+   
         ))}
     </div>
     </div>

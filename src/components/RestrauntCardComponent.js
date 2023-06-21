@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const RestrauntCardComponent = (props) => {
     const {resData} = props;
     const {name,avgRating,cuisines,
@@ -6,6 +7,7 @@ const RestrauntCardComponent = (props) => {
      let imgVal = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+ resData.data.cloudinaryImageId
     return (
       <div className="restraunt-card">
+    
         <img
           className="restraunt-food-Image"
           alt="Food"
